@@ -41,6 +41,7 @@ function multiply(a, b) { //eslint-disable-line
     return [multiplyTwoNums, multiplyString];
 }
 
+
 // Here is the test for multiply(); uncomment it to run it
  testMultiply(5,9);
 
@@ -59,11 +60,33 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  //add the numbers
+  var sumOfTwo = sum (a,b) [0];
+  // console.log(sumOfTwo);
+  var sumOfThree = sum(sumOfTwo,c) [0];
+  // console.log(sumOfThree);
+
+  //multiply the numbers
+  var multiplyTwo = multiply (a, b)[0]
+
+  var productOfFirstTwo = multiply(a, b)[0];
+  var multiplyThree = multiply(productOfFirstTwo, c);
+  // console.log('multiply 3 prod', multiplyThree);
+  
+  //concatenate a string "4 and 7 and 5 sum to 16"
+  var sumOfThreeString =  a + ' and ' + b + ' and ' + c + ' sum to ' + sumOfThree + '.'
+  // console.log('sum of three', sumOfThreeString);
+
+  //concatenate a string "The product of 4 and 7 and 5 is 140."
+  var multiplyThreeString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplyThree[0] + '.'
+  // console.log('multiply 3 str', multiplyThreeString);
+
+ return [sumOfThree, multiplyThree, sumOfThreeString, multiplyThreeString];
 
 }
-
+//sumAndMultiply(4,7,5);
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
