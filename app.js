@@ -134,8 +134,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray) { //eslint-disable-line
+  var productTwo = multiply(testArray[0], testArray[1]);
+   var productThree = multiply(productTwo[0], testArray[2]);
+   var finalProduct = productThree[0];
 
+ var productTestArrayString = 'The numbers ' + testArray + ' have a product of ' + finalProduct + '.'
+
+ return [finalProduct, productTestArrayString];
 }
+ 
+ testMultiplyArray(testArray);
+ 
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
